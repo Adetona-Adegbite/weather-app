@@ -4,9 +4,10 @@ import { FaSearch } from "react-icons/fa";
 async function fetchFromServer(city) {
   if (city !== "") {
     const response = await fetch(
-      `http://weather-app-backend-xv1f.onrender.com/weather?city=${city}`
+      `https://weather-app-backend-xv1f.onrender.com/weather?city=${city}`
     );
     const data = await response.json();
+    console.log(data);
     return data;
   }
 }
